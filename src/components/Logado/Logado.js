@@ -12,7 +12,6 @@ const Logado = (props) => {
       return;
     }
     const token = JSON.parse(getToken).token;
-    console.log(token);
     axios
       .get("/auth/profile", {
         headers: {
