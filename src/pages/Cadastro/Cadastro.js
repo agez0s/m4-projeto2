@@ -80,12 +80,12 @@ const Cadastro = () => {
       <Header />
       <div className="flex flex-col mx-auto">
         <div className="text-4xl text-center w-screen my-8">
-          Alguns dos filmes que estão lhe esperando!
+          Cadastre-se agora! Primeiro mês (e todos os outros) é grátis!
         </div>
 
         
         <div className="flex p-4 text-xl border-2 m-auto rounded-xl shadow-xl w-1/2 justify-center">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="text-center">
             <label
               htmlFor="name"
               className="block text-gray-700 font-bold mb-2"

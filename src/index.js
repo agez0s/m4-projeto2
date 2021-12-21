@@ -11,6 +11,7 @@ import Cadastro from './pages/Cadastro/Cadastro';
 import List from './pages/List/List';
 import Profile from './pages/Profile/Profile';
 import Movie from './pages/Movie/Movie';
+import Footer from './components/Footer/Footer';
 
 axios.defaults.baseURL = 'https://streaming-api-1.herokuapp.com/';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -40,6 +41,7 @@ ReactDOM.render(
     
     </Routes>
     </BrowserRouter>
+    <Footer/>
     </React.StrictMode>,
   document.getElementById('root')
 );

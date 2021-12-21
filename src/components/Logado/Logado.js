@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Logado = (props) => {
   const [loggedUser, setLoggedUser] = useState([]);
@@ -25,6 +26,15 @@ const Logado = (props) => {
   const Logout = () => {
     localStorage.removeItem("token");
     props.setLogado(false);
+    toast.info(`Usuário deslogado`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      });
     navigate("/");
   };
   const openProfile = () => {
@@ -47,7 +57,7 @@ const Logado = (props) => {
       </div>
 
       <div>
-        <img src={loggedUser.imageUrl} className="h-10" alt={loggedUser.name} />
+        <img src={loggedUser.imageUrl} className="h-10 rounded-full" alt={loggedUser.name} />
       </div>
     </div>
   );

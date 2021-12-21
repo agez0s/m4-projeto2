@@ -51,7 +51,7 @@ const Movie = () => {
             {filme.title} ({filme.year})
           </div>
             {logado ? (
-              <Assistiu movie={filme.id} />
+              <Assistiu movie={filme} />
             ) : (
               <>
               <div className="text-4xl self-center flex items-center flex-col">

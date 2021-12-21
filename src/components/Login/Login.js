@@ -28,6 +28,15 @@ const Login = (props) => {
         };
         localStorage.setItem("token", JSON.stringify(itemFinal));
         props.setLogado(true)
+        toast.info(`Usuário logado`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: false,
+          progress: undefined,
+          });
         navigate("/")
       })
       .catch((err) => {

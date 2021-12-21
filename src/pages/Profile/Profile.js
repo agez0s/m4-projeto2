@@ -18,8 +18,7 @@ const Profile = () => {
       })
       .then((response) => {
         setAssistidos(response.data);
-        console.log(response.data);
-      });
+        });
   }, []);
 
   const getToken = localStorage.getItem("token");
@@ -45,8 +44,10 @@ const Profile = () => {
             <p>Data de Nascimento: {profileData.birthdate}</p>
           </div>
           <div className="w-1/2">
-            <div className="text-2xl">Você já assistiu {assistidos.length} filmes!</div>
-            <div className="grid grid-cols-2 gap-8 mt-8">
+            <div className="text-2xl">
+              Você já assistiu {assistidos.length} filmes!
+            </div>
+            <div className="grid grid-cols-4 gap-8 mt-8">
               {assistidos.map((item) => (
                 <CardProfile
                   titulo={item.title}
