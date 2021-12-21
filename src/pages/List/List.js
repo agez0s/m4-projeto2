@@ -29,7 +29,7 @@ const List = () => {
     <>
       <Header />
       <div className="mt-10 mx-auto text-center text-7xl">Confira nosso acervo!</div>
-      <div>{loading}</div>
+      <div className="text-4xl mx-auto my-10 max-w-prose">{loading}</div>
 
       <div className="grid grid-cols-4 gap-4 gap-y-8 justify-center p-8">
       { filmes.map((item) => (

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from '../../components/Header/Header'
 import axios from 'axios';
 import CardCadastro from '../../components/CardCadastro/CardCadastro'
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -49,7 +50,7 @@ const Home = () => {
             />
           ))}
         </div>
-        <div>Crie sua conta agora mesmo!</div>
+        <div className='my-10 text-4xl'><Link to="/cadastro">Crie sua conta agora mesmo!</Link></div>
         </div>
         </>
         
